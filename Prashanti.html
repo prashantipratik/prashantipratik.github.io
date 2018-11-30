@@ -1,0 +1,787 @@
+﻿
+<!DOCTYPE html>
+<head>
+<style>
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("1.jpg");
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("2.jpg");
+    min-height: 500px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("3.jpg");
+    min-height: 500px;
+}
+
+/* Third image (Contact) */
+.bgimg-4 {
+    background-image: url("4.jpg");
+    min-height: 500px;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+}
+
+
+
+.zoomin img {  -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -ms-transition: all 2s ease; transition: all 2s ease; } .zoomin img:hover { width: 300px; height: 300px; }
+
+</style>
+</head>
+<html>
+	<title>Happy B`Dae PRASHANTI</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "comic sans ms", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+	
+}
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top" style="color:black;">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" style="text-decoration:none;" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" style="text-decoration:none;" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#hobbies" style="text-decoration:none; " class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> F<span style="color:red"><b>.</b></span>R<span style="color:blue">.</span>I<span style="color:yellow">.</span>E<span style="color:red">.</span>N<span style="color:blue">.</span>D<span style="color:yellow">.</span>S </a>
+	<a href="#portfolio" style="text-decoration:none;" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-address-book-o"></i>&nbsp;&nbsp;MEMORIES </a>
+    <a href="#happybdae" style="text-decoration:none;" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-birthday-cake"></i>&nbsp;&nbsp;HAPPY B`DAE</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" style="text-decoration:none;" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" style="text-decoration:none;" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#hobbies" style="text-decoration:none;" class="w3-bar-item w3-button" onclick="toggleFunction()">F<span style="color:red"><b>.</b></span>R<span style="color:blue">.</span>I<span style="color:yellow">.</span>E<span style="color:red">.</span>N<span style="color:blue">.</span>D<span style="color:yellow">.</span>S </a>
+	<a href="#portfolio" style="text-decoration:none;" class="w3-bar-item w3-button" onclick="toggleFunction()">MEMORIES</a>
+	<a href="#happybdae"  style="text-decoration:none;" class="w3-bar-item w3-button"><i class="toggleFunction()"></i>HAPPY B`DAE</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 img-responsive w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <h2><span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Happy Birthday PRASHANTI</span></h2>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h2 class="w3-center">ABOUT Prashanti</h2>
+  <br><br>
+  <p>
+  
+  <h4 class="text-center">Kutti.. <br>
+Happy birthday!!  Lets start from the beginning...</h4>
+<br>
+<h4>2nd year- </h4>
+Tune just college join kia tha aur shuru se hi alag group ban gya phir tu aur mai same class me aae...
+Tab 1st time tujhe mila mai par kuch jada baat nhi hui.. 
+Tab mujhe laga tha tu bohat silent aur simple hai par I was definitely wrong 😆😆
+
+
+  
+  </p>
+  
+  
+  
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+     <p class=" text-center"><b><i class="fa fa-user w3-margin-right"></i>Prashanti</b></p>
+      <img src="5.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off " alt="Photo of Me" width="500" height="333"/>
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6  w3-padding-large">
+	 
+	 <p>
+	 
+	<h4> 3rd Year- </h4>
+	 1st sem me batches shuffle.
+ Hui.. Tu aur mai. Same batch me aae.. 
+ That was the 1st time I thought ki baat karta hu tujhse so I texted you with useless excuse😆😆
+ just to get the conversation started.. 
+ Phir har roz chats hone lagi... 
+ I used to call u dhakkan par uss time pe nhi laga tha ki some day we will become best friends...
+ Par college me ek word bhi baat nhi karte the pta nhi q..
+ phir maine pucha ki meri ek assignment likh ke de na i was just trying but Luckily u said yesss🙈🙈...
+ Den ek din decide kia ki  saath baithte hai lab me.. Den uss din se aaj tak college me har lecture me saath baithe😘...
+ N mai roz college aata tha coz u were there n literally meri attendance improve ho gyi thi..
+ Phir aai wo alibagh wali trip.. Uss din ke badse we became best friends..
+ I never thought we would ever come so close to me that I would share each and everything with u...
+<br><br>
+<h4>4th year- </h4>
+You shifted to flat n we started spending whole day together..
+ From  completing assignments.. To studing for each exam together..
+ To playing mini militia together... To doing almost everything together...
+ Mai har roz ready hoke tere room pe aata tha aur pareshan karke tujhe uthata tha...
+ Phir saath me chocos/idli khate the den placements ke lie padhte the...
+ Phir bor hua ki PUBG 😁...
+ Den din bhar time pass... 
+ Literally we lived each sec together...
+ M very lucky to have u❤ I love u😘...
+ I still remember ki meri tabiyat kharab thi n u were there with me each day..
+ I wish, I pray,I want u to be my side for the whole life..
+</p>
+
+	</div>
+  </div>
+  
+  
+ 
+
+<div class="text-justify w3-center w3-padding-large">
+<p>
+I promise to stay with u no matter what..
+ I miss u alot..
+ I miss your really nonsense talks...
+ I am always there to care of u...
+ If my one wish would come true I would wish for those college days with u😘...
+ U have no idea how much u mean to me.. How much u matter...
+ I have seen your every face..
+ your anger, your laugh, your nonsense talks, your cry n every other mood you have been in... 
+ N trust me i know Tu chutiya h gadhi h par m very happy to be there for these faces... 
+ n   I want u to know that u r the closest to me.... N always be....❤
+
+I want to write more and more but this is never gonna end coz each day together with you is everlasting memory to me..
+  
+	 
+	 </p>
+</div>	
+ </div>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 img-responsive w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide" style="font-family:friend;color:red">F.R.I.E.N.D.S</span>
+	
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+
+<div class=" w3-content w3-container w3-padding-64" id="hobbies">
+<h1 class="text-center" style="font-family:friends;color:black">F<span style="color:red">.</span>R<span style="color:blue">.</span>I<span style="color:yellow">.</span>E<span style="color:red">.</span>N<span style="color:blue">.</span>D<span style="color:yellow">.</span>S </h1>
+    <br>
+	<h4 class="text-center"> <i>Hover over images</i><h4><br><br>
+	<div class="row">
+	<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="I know we are not connected by blood but I know that our connection is greater than those. We have been through many ups and downs but I just wanna tell u that I will always be there for u and will remain same. I hope u will never forget me and remains same. Wish u a very happy birthday sis stay happy😘😘😘😘 and Pratik SE darna chod 😊😊😊😊
+Prashanti tu na sach me Gawar Aurat hai😅Tera wo cricket wala explanation bohat sahi tha😂Tujhe dimag lagane bohat maja ata..Ur a nice Sister.Miss U God bless you😘😘😘😘">
+<img src="A.jpg" onclick="onClick(this)"  class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 	</div>
+	
+	<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Ae mand ....
+Do you  know you are  one of the  kind and pure hearted person i have ever met in my life, and i am glad that you are the part of my life
+have blast , happy birthday !! 
+BTW tu moti hogai hai ">
+<img src="I.jpg" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 	</div>
+	
+	<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Hey, Padosan!!!! WISH YOU MANY MANY HAPPY RETURNS OF THE DAY 
+I have never lived away from my parents before.. this is my first time to live at an unknown place on my own.. Thank you for making me comfortable to live in an unknown city...
+When we first met in office canteen,I didn't know we would be so close later.. it took some time for us to get comfortable with each other.. but now, it seems we are real sisters!! Hai na Didi
+You taught to me love yourself and take care of yourself.. you taught me how to do shopping.. you taught me how to apply eyeliner.. you taught me many such small things.. Thank you so much for that
+
+On this special day of yours, I will only wish for your good health, happiness, and a bright future(of course with Pratik by your side )..
+day you climb higher and higher peaks of success in your life...
+And last but not the least, Thank you for 'being' in my life
+Love you padosan, roomie, bro, chutiya, shaanti, etc
+HAPPY BIRTHDAY ONCE AGAIN BRO Enjoy your special day and have a blast"><img src="J.jpg" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>
+	
+	<div class="col-sm-3 w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Dear roomie,
+I love u. 
+There have been only few months we met but the bond we share feel like we have been roomies since years.
+You are such an amazing and gorgeous person anybody wud love to have.
+ You are my sister from another mother!!? I promise we will make crazy, fun,  stupid, wonderful memories together. 
+ I promise to not only know all of ur best stories but live with u??.
+ I promise to only SOMETIMES pretend like i dont know u when u act crazy in public.
+ n i promise to laugh with u n when I laugh at u - you will know I love u 
+Happy birthday sweetheart !!
+May u get all the happiness n may all ur wishes cum true. 
+#sleepingpartner #shoppingpartner #foodpartner. Lu loads"><img src="K.jpg"  onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>
+	
+	
+	</div>
+		
+	
+	<br><br>
+	
+		<div class="row">
+		
+	<div class="col-sm-3 w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Hieyy my ex-best friend..
+	ata pn ahesch 
+I miss our crazy talks,silly fights and pointless jokes..
+I miss being us together..
+Hope to see u soon.."><img src="G.jpg"  onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>	
+	
+	<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="I met you when we were kids not knowing what friends are, not knowing how far we would go. But today here we are stronger and together❤
+16 years together with all the fights and the emotional moments, with talking all day and night and not talking at all for days staying mad at each other, but at the back of mind knowing we were just a call away from each other no matter what arguments we had.
+Wanted you to know that this is never going to change. We will have arguments and will be stronger and together as ALWAYS.
+Happy Bday You Idiot.
+And yes You can Count on me Like One Two Three and I'LL BE THERE. Coz I know when I need it I can count on you like Three Two One and YOU'LL BE THERE.
+I love you More than you think I do💕
+LOVE LOVE🖤"><img src="L.jpg" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>
+	
+	
+	
+	<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Hiii makkade,
+As our journey as roomates came to an end ,but don't worry ur always the same for me and tashich raha.
+Khup bhari vataych tula hakkane kahi sangyala kiva ragvayla...
+BC missing ur makeup and dressing suggestions pagal Lavkar bhet mala..
+Missing U alot..love U"><img src="D.jpg"  onclick="onClick(this)"class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>
+	
+	
+	
+	<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="This is prashanti bro....Prashanti bro is hot girl.From MOD to hennys ,from chain reaction to pubg,from serious talks in bvp to shitty chats at Prashanti bro's room......
+	Bro was with me....be like Prashanti bro .
+	happy birthday bro
+Happy bday LTI girl"><img src="H.jpg"  onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>
+	</div>
+	
+	<br><br>
+		<div class="row">
+		
+		<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="You look younger than ever!!!! par thodi moti ho gayi h...anyway, happy birthday prasganti??
+I love you more than I love chai"><img src="B.jpg" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>
+	
+	<div class="col-sm-3 w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Hey Prashanti!!!
+O sorry!!! Hey pashu baby..
+Here's few kind (and rare )words from your ex-roommate(and current best friend)
+Here we go!!!( Pardon my writing skills!!)
+
+To the friend who taught me Pubg,
+To the friend that made me ate donuts,and
+To the friend who came and never left.
+
+I don't know from where to start so I thought y not start from the very start
+
+From that little conversation of my bellies with you ,to going to Java classes.
+ From becoming project partners, to becoming cooking partners.
+ From dancing ,to laughing at our silly jokes(and sometimes laughing without any reason).
+ From joining LTI to becoming roommates...
+ I seriously have no idea which phase it was when u became so close and very special to me. 
+ Although we are a distance apart but let me tell u 
+ I still love u the same way I did before and will always love u no matter how far we are
+
+Happy birthday my monkey 
+God bless you!!"><img src="C.jpg"  onclick="onClick(this)"class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>
+		
+	<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Shanti pra jii!!! Happy janam-day...bada khush ho gya may paida ho gyi tu...esse he paida hotte reh har saal.
+Mast tere liye dil se do line likhi hai...gor farmaiyega.
+"meelon ka fasala hai...par dillon may duri nhi... 
+ye Dosti aarson ka falsafa  hai...chand palon ki nahi..."
+love❤️  "><img src="F.jpg" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 
+	</div>
+	
+	<div class="col-sm-3  w3-center">
+	
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="Happy birthday prashanti !! Gbu bless u!!aur  ha iss baar Goa wo bhi Bina koi injury ke!!
+	Aur ha ichalkarnji is better than sangli!!
+	Happy birthday sanglikar!!">
+<img src="E.jpg" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" ></a>
+ 	</div>
+	
+	
+	</div>
+<p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-mountain"></i>Sleeping</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:110%">110%</div>
+  </div>
+  <p class="w3-wide"><i class="far fa-handshake"></i>Maintaining Relations</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-grunt"></i>Irritating People</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
+  </div>
+  
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 img-responsive w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">Prashanti`s MEMORIES</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64 container-fluid" id="portfolio">
+	<div class="w3-content w3-container w3-padding-64" id="portfolio">
+	  <h1 class="text-center">Hello Mannu</h1><br><br>
+		
+	<div class="row">
+
+	<div class="col-sm-6">
+	
+	<img src="aai.jpg" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" >
+	
+	
+	<!--<div class="container">
+  <img src="aai.jpg" alt="Avatar" class="image" >
+  <div class="middle">
+    <div class="text">
+	
+	HAPPY BIRTHDAY MANNU
+	
+	</div>
+  </div>
+</div>
+	
+	<div class="hovereffect">
+        <img class="img-rounded img-responsive w3-hover-opacity" src="aai.jpg" alt="">
+        <div class="overlay">
+           
+           <a class="info" href="aai.jpg">link here</a><br>
+
+        </div>
+    </div>
+	
+	<img src="aai.jpg" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" >
+		<div id="tainer">
+		  <img src="6.jpg" alt="" />
+
+		  <div id="lay"></div>
+		  <div id="ton"> <a>dvdfsd</a></div>
+		</div>
+
+		<br><br><br><br><br>
+
+
+		<div class="hovereffect">
+        <img src="" onclick="onClick(this)" class="img-rounded img-responsive w3-hover-opacity" >
+        <div class="overlay">
+           
+           <br>
+	
+        </div>
+		</div>-->
+		
+	</div>	
+	
+	<div class="col-sm-6">
+		
+		<h4 class="text-justify" style=" line-height:27px;"><b><i>Mazi evalishi Manu aata etki mothi zaliy ki ti baghta baghta  Engineer houn swatahachya payawar ubhi pan rahili ahe.  Tichya hya sarv journey cha ani success cha amhala khup khup Aanand hoto  ani amhala ticha khup " Abhimaan " watato.  We feel really "PROUD " of her.... Ani Manu chya mazya life madhlya entry mule me Aai hone mhanje kay te anubhavle.... In fact , because of HER  I really mean it what is the meaning of Mother.....!!!! Ti kitihi mothi zali tari aamchyasathi MANU ch asnar ahe.  Nehmi sarvana respect deun ,  humble (namra),  honest rahun,  Help ever Hurt never ase rahun Baba chya track var rahave.  Kadhi ch tyana visaru naye.  Tila chan health milun tichi khup khup progress houn tiche sarv Dreams purna vhavet. Nehmi Sukhi ,  Happy, Aanandi ani Healthy raha...Asa aashirwad ahe amcha.  Tum Jiyo Hazaron Saal.... Saal ke Din ho Pachas Hazar...... Wish u Many Many Happy Returns of the Day .... BETA....</b></i></h4>
+	
+	</div>
+	
+	</div>	
+	
+	<h1 class="text-center">Some Memorable Moments</h1><br>
+	<!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+  
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+	  <li data-target="#myCarousel" data-slide-to="3" ></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+	  <li data-target="#myCarousel" data-slide-to="6" ></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+	  <li data-target="#myCarousel" data-slide-to="9" ></li>
+      <li data-target="#myCarousel" data-slide-to="10"></li>
+      <li data-target="#myCarousel" data-slide-to="11"></li>
+	    <li data-target="#myCarousel" data-slide-to="12"></li>
+      <li data-target="#myCarousel" data-slide-to="13"></li>
+      <li data-target="#myCarousel" data-slide-to="14"></li>
+	  <li data-target="#myCarousel" data-slide-to="15" ></li>
+      <li data-target="#myCarousel" data-slide-to="16"></li>
+      <li data-target="#myCarousel" data-slide-to="17"></li>
+	  <li data-target="#myCarousel" data-slide-to="18"></li>
+      <li data-target="#myCarousel" data-slide-to="19"></li>
+      <li data-target="#myCarousel" data-slide-to="20"></li>
+	  <li data-target="#myCarousel" data-slide-to="21"></li>
+      <li data-target="#myCarousel" data-slide-to="22"></li>
+      <li data-target="#myCarousel" data-slide-to="23"></li>
+	    <li data-target="#myCarousel" data-slide-to="24"></li>
+      <li data-target="#myCarousel" data-slide-to="25"></li>
+      <li data-target="#myCarousel" data-slide-to="26"></li>
+	  <li data-target="#myCarousel" data-slide-to="27"></li>
+      <li data-target="#myCarousel" data-slide-to="28"></li>
+      <li data-target="#myCarousel" data-slide-to="29"></li>
+	  <li data-target="#myCarousel" data-slide-to="30"></li>
+      <li data-target="#myCarousel" data-slide-to="31"></li>
+      <li data-target="#myCarousel" data-slide-to="32"></li>
+	
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" >
+      <div class="item active">
+        <img src="38.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="37.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="36.jpg"  style="width:100%;" >
+      </div>
+	  
+	  <div class="item active">
+        <img src="35.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="34.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="33.jpg"  style="width:100%;" >
+      </div>
+	  
+	  <div class="item active">
+        <img src="32.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="31.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="30.jpg"  style="width:100%;" >
+      </div>
+	  
+	  <div class="item active">
+        <img src="29.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="28.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="27.jpg"  style="width:100%;" >
+      </div>
+	  
+	  <div class="item active">
+        <img src="26.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="25.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="24.jpg"  style="width:100%;" >
+      </div>
+	  
+	  <div class="item active">
+        <img src="23.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="22.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="21.jpg"  style="width:100%;" >
+      </div>
+	  
+	  <div class="item active">
+        <img src="20.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="19.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="18.jpg"  style="width:100%;" >
+      </div>
+	  
+	  <div class="item active">
+        <img src="17.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="16.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="15.jpg"  style="width:100%;" >
+      </div>
+	  
+	   <div class="item active">
+        <img src="14.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="13.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="12.jpg"  style="width:100%;" >
+      </div>
+	  
+	  <div class="item active">
+        <img src="11.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="10.jpg"  style="width:100%;" >
+      </div>
+    
+      <div class="item">
+       <img src="9.jpg"  style="width:100%;" >
+      </div>
+	  
+	  
+	   <div class="item active">
+        <img src="8.jpg"  style="width:100%;" >
+      </div>
+
+      <div class="item">
+        <img src="7.jpg"  style="width:100%;" >
+      </div>
+    
+      
+	  
+	  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+  
+    
+  </div>
+
+  
+	</div>
+</div>
+
+
+<!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-4 img-responsive w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">Prashanti Happy Birthday</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+  
+<div class=" row" id="happybdae">
+<br><br><br>
+<h1 class="text-center">Prashanti Happy Birthday</h1>
+<div class="w3-col m3 w3-center w3-padding-large">
+<img class="w3-round w3-image img-responsive" src="hbd.jpg"/>
+</div>
+<div class="w3-col m6 w3-center w3-padding-large col-sm-6 text-center" >
+
+<br>	Happy birthday dear!! 
+<br>	Happy birthday to my dearest best friend. 
+<br>	May your day be as beautiful and amazing as you! 
+<br>	I wish you all the happiness in the world. I love you!
+<br>    I promise that the more birthday candles you blow, the more I will be here for you to celebrate every special event in your life
+
+</div>
+<div class="w3-col m3 w3-center w3-padding-large col-sm-3">
+<img class="img-responsive" src="hbd2.jpg"/>
+</div>
+</div><br><br>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" style="text-decoration:none;" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="#"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>A small gift from Pratik</p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+
+</body>
+</html>
